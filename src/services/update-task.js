@@ -24,7 +24,7 @@ function updateTaskProgess(tipo,posicaoTask){
 
     }
 
-    if (tipo === "em andamento") {
+    if (tipo === "em-andamento") {
 
         json[posicaoTask].status = "em andamento";
     

@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "task": "Estudar Node.js",
+    "status": "a fazer",
+    "date": "2026-05-30T17:03:41.888Z"
+  },
+  {
+    "task": "Criar projeto CLI",
+    "status": "concluidas",
+    "date": "2026-05-30T17:03:41.923Z",
+    "dateUpdate": "2026-05-30T17:03:42.132Z"
+  },
+  {
+    "task": "Criar projeto CLI de tarefas",
+    "status": "em andamento",
+    "date": "2026-05-30T17:03:41.963Z",
+    "dateUpdate": "2026-05-30T17:03:42.101Z"
+  }
+]

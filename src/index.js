@@ -3,7 +3,7 @@ import { addTask } from "./services/add-task.js";
 import { listTask } from "./services/list-task.js";
 import { lerJson } from "./utils/json-utils.js";
 import { removeTask } from "./services/remove-task.js";
-import { updateTask } from "./services/update-task.js";
+import { updateTaskContent,updateTaskProgess } from "./services/update-task.js";
 
 
 const funcionalidade = process.argv[2];
@@ -26,13 +26,19 @@ if (funcionalidade === "update") {
     updateTaskContent(argumento1,argumento2);
 
 }
-if (funcionalidade === "concluir" || funcionalidade == "em andamento") {
+if (funcionalidade === "concluir" || funcionalidade == "em-andamento") {
 
     updateTaskProgess(funcionalidade,argumento1);
 
 }
-if (funcionalidade === "list-concluidas" || funcionalidade === "list-afazer" || funcionalidade === "list-andamento") {
+if (funcionalidade === "list") {
 
-    listTask(funcionalidade);
+    if (argumento1 === undefined) {
+        listTask();
+    }
+    else {
+        listTask(argumento1);
+    }
+    
 
 }
