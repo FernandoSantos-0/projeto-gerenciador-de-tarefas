@@ -11,34 +11,28 @@ const argumento1 = process.argv[3];
 const argumento2 = process.argv[4];
 const argumento3 = process.argv[5];
 
-if (funcionalidade === "add")    {
+switch (funcionalidade) {
+    case "add":
+        addTask(argumento1);
+        break;
 
-    addTask(argumento1);
+    case "delete":
+        removeTask(argumento1);
+        break;
 
-}
-if (funcionalidade === "delete") {
+    case "update":
+        updateTaskContent(argumento1, argumento2);
+        break;
 
-    removeTask(argumento1);
+    case "concluir":
+    case "em-andamento":
+        updateTaskProgess(funcionalidade, argumento1);
+        break;
 
-}
-if (funcionalidade === "update") {
-
-    updateTaskContent(argumento1,argumento2);
-
-}
-if (funcionalidade === "concluir" || funcionalidade == "em-andamento") {
-
-    updateTaskProgess(funcionalidade,argumento1);
-
-}
-if (funcionalidade === "list") {
-
-    if (argumento1 === undefined) {
-        listTask();
-    }
-    else {
+    case "list":
         listTask(argumento1);
-    }
-    
+        break;
 
+    default:
+        console.log("Comando inválido.");
 }
